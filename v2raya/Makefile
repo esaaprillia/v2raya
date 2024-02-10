@@ -27,7 +27,7 @@ GO_PKG_LDFLAGS_X:= \
 	$(GO_PKG)/core/iptables.TproxyNotSkipBr=true
 
 include $(INCLUDE_DIR)/package.mk
-include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
+include $(TOPDIR)/feeds/v2raya/golang/golang-package.mk
 
 TAR_OPTIONS+= --strip-components 1
 TAR_CMD=$(HOST_TAR) -C $(1)/.. $(TAR_OPTIONS)
