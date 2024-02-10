@@ -37,7 +37,14 @@ define Package/v2raya
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Web Servers/Proxies
-  DEPENDS:=$(GO_ARCH_DEPENDS) +ca-bundle
+  DEPENDS:=$(GO_ARCH_DEPENDS) \
+    +ca-bundle \
+    +iptables-mod-conntrack-extra \
+    +iptables-mod-extra \
+    +iptables-mod-filter \
+    +iptables-mod-tproxy \
+    +kmod-ipt-nat6 \
+    +xray-core
   URL:=https://v2raya.org
 endef
 
