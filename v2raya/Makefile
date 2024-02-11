@@ -44,7 +44,9 @@ define Package/v2raya
     +iptables-mod-filter \
     +iptables-mod-tproxy \
     +kmod-ipt-nat6 \
-    +xray-core
+    +xray-core \
+    +v2fly-geoip \
+    +v2fly-geosite
   URL:=https://v2raya.org
 endef
 
