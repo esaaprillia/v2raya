@@ -66,15 +66,17 @@ define Build/Compile
 endef
 
 define Package/v2fly-geoip/install
-	$(INSTALL_DIR) $(1)/usr/share/v2ray $(1)/usr/share/xray
+	$(INSTALL_DIR) $(1)/usr/share/v2ray
 	$(INSTALL_DATA) $(DL_DIR)/$(GEOIP_FILE) $(1)/usr/share/v2ray/geoip.dat
-	$(LN) ../v2ray/geoip.dat $(1)/usr/share/xray/geoip.dat
+	$(INSTALL_DIR) $(1)/usr/share/xray
+	$(INSTALL_DATA) $(DL_DIR)/$(GEOIP_FILE) $(1)/usr/share/xray/geoip.dat
 endef
 
 define Package/v2fly-geosite/install
-	$(INSTALL_DIR) $(1)/usr/share/v2ray $(1)/usr/share/xray
+	$(INSTALL_DIR) $(1)/usr/share/v2ray
 	$(INSTALL_DATA) $(DL_DIR)/$(GEOSITE_FILE) $(1)/usr/share/v2ray/geosite.dat
-	$(LN) ../v2ray/geosite.dat $(1)/usr/share/xray/geosite.dat
+	$(INSTALL_DIR) $(1)/usr/share/xray
+	$(INSTALL_DATA) $(DL_DIR)/$(GEOSITE_FILE) $(1)/usr/share/xray/geosite.dat
 endef
 
 $(eval $(call BuildPackage,v2fly-geoip))
