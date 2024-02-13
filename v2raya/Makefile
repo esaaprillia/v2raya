@@ -39,6 +39,7 @@ define Package/v2raya
   SUBMENU:=Web Servers/Proxies
   DEPENDS:=$(GO_ARCH_DEPENDS) \
     +ca-bundle \
+    +ip-full \
     +iptables-mod-conntrack-extra \
     +iptables-mod-extra \
     +iptables-mod-filter \
